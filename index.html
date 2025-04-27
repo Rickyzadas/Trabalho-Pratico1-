@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de receitas D'Gustars - Aprenda a fazer deliciosas receitas">
+    <title>D'Gustars⭐ - Receitas Deliciosas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="text-decoration-none">
+                    <a href="index.html" class="text-decoration-none text-white">
+                        <h1 class="m-0 d-inline-block">D'Gustars<span class="text-warning">⭐</span></h1>
+                      </a>
+                  </a>
+                
+                <div class="caixa-pesquisa d-flex">
+                    <input type="text" id="pesquisa" class="form-control" placeholder="Buscar receitas...">
+                    <button class="btn btn-outline-light ms-2">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Barra Lateral -->
+            <aside class="col-md-3 col-lg-2 d-md-block sidebar">
+                <nav class="menu-navegacao p-3">
+                    <h2 class="titulo-secao fs-5 mb-3">Categorias</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="bebidas.html" class="nav-link link-menu">
+                                <i class="bi bi-cup-hot me-2"></i>Bebidas
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="gelados.html" class="nav-link link-menu">
+                                <i class="bi bi-snow me-2"></i>Gelados
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="lanches.html" class="nav-link link-menu">
+                                <i class="bi bi-egg-fried me-2"></i>Lanches
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="sobremesas.html" class="nav-link link-menu">
+                                <i class="bi bi-cake me-2"></i>Sobremesas
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="col-md-9 col-lg-10 px-md-4">  
+                <section class="mb-5">
+                    <h2 class="titulo-secao text-center mb-4">Receitas em Destaque</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators" id="carousel-indicators"></div>
+                                <div class="carousel-inner rounded-3" id="carousel-inner"></div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cards de Receitas -->
+                <section>
+                    <h2 class="titulo-secao text-center mb-4">Receitas Recomendadas</h2>
+                    <div class="card-group mb-5" id="card-group-receitas">
+                    </div>
+                </section>
+                    <!-- Informações do Aluno -->
+                    <section class="informacoes-aluno mt-5">
+                        <h2 class="titulo-secao text-center mb-4">Informações do(a) Aluno(a)</h2>
+                        <div class="card informacoes-card">
+                            <div class="card-body">
+                                <table class="table table-borderless informacoes-table">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="text-end">Aluno:</th>
+                                            <td>Henrique Pereira Resende Rocha</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-end">Curso:</th>
+                                            <td>Engenharia de Software</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="text-end">Turma</th>
+                                            <td>Manhã</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="redes-sociais text-center mt-3">
+                                    <h5 class="mb-3">Redes Sociais:</h5>
+                                    <a href="#" class="rede-social me-3"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="rede-social me-3"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="rede-social"><i class="bi bi-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="rodape py-3 mt-4">
+        <div class="container text-center">
+            <p class="m-0">&copy; <span id="ano-atual">2025</span> D'Gustars. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

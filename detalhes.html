@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhes da receita - D'Gustars">
+    <title>D'Gustars⭐ - Detalhes da Receita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-decoration-none">
+                    <a href="index.html" class="text-decoration-none text-white">
+                        <h1 class="m-0 d-inline-block">D'Gustars<span class="text-warning">⭐</span></h1>
+                      </a>
+                  </a>
+                <div class="d-flex">
+                    <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar receitas...">
+                    <button class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Barra Lateral -->
+            <aside class="col-md-3 col-lg-2">
+                <nav class="nav flex-column px-3">
+                    <h2 class="fs-5 mb-3 text-primary">Categorias</h2>
+                    <a href="bebidas.html" class="nav-link mb-2"><i class="bi bi-cup-hot me-2"></i>Bebidas</a>
+                    <a href="gelados.html" class="nav-link mb-2"><i class="bi bi-snow me-2"></i>Gelados</a>
+                    <a href="lanches.html" class="nav-link mb-2"><i class="bi bi-egg-fried me-2"></i>Lanches</a>
+                    <a href="sobremesas.html" class="nav-link mb-2"><i class="bi bi-cake me-2"></i>Sobremesas</a>
+                </nav>
+            </aside>
+
+            <!-- Conteúdo Principal -->
+            <main class="col-md-9 col-lg-10 px-4">
+                <a href="index.html" class="btn btn-outline-primary mb-4"><i class="bi bi-arrow-left"></i> Voltar</a>
+                
+                <!-- Informações Gerais -->
+                <section class="mb-5">
+                    <h2 class="mb-4 text-center">Informações Geral</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img id="imagem-receita" src="" alt="" class="img-fluid rounded mb-3 shadow">
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 id="titulo-receita" class="display-6 mb-3"></h1>
+                            <div class="d-flex flex-wrap gap-3 mb-4">
+                                <span id="tempo-preparo" class="badge bg-primary"><i class="bi bi-clock"></i> <span class="tempo-texto"></span></span>
+                                <span id="dificuldade" class="badge bg-success"><i class="bi bi-star"></i> <span class="dificuldade-texto"></span></span>
+                                <span id="categoria" class="badge bg-info"><i class="bi bi-tag"></i> <span class="categoria-texto"></span></span>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title"><i class="bi bi-card-text me-2"></i>Descrição</h3>
+                                    <p id="descricao-receita" class="card-text"></p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="h5 card-title"><i class="bi bi-list-check me-2"></i>Ingredientes</h3>
+                                    <ul id="lista-ingredientes" class="list-group list-group-flush"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Modo de Preparo -->
+                <section class="mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title h4"><i class="bi bi-list-ol me-2"></i>Modo de Preparo</h2>
+                            <ol id="passos-preparo" class="list-group list-group-numbered list-group-flush"></ol>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fotos do Item -->
+                <section>
+                    <h2 class="mb-4 text-center">Fotos do Item</h2>
+                    <div id="fotos-receita" class="row g-3">
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="m-0 small">&copy; <span id="ano-atual">2025</span> D'Gustars. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
